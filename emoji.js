@@ -15,17 +15,26 @@ function renderEmoji() {
     spanEl.className = "emoji";
     image.className = "emoji emoji-img";
     if (
+      emoji.startsWith("http") &&
+      (emoji.endsWith(".jpg") ||
+       emoji.endsWith(".webp") ||
+       emoji.endsWith(".png"))
+    ) {
+      image.alt = "";
+      image.src = `${emoji}`;
+    }
+    else if (
       emoji.endsWith(".jpg") ||
       emoji.endsWith(".webp") ||
       emoji.endsWith(".png")
     ) {
       image.src = `images/${emoji}`;
       image.alt = `${emoji.replace(emoji.slice(-4), "")}`;
-      emojiWrapper.append(image);
     } else {
       spanEl.textContent = emoji;
       emojiWrapper.append(spanEl);
     }
+   emojiWrapper.append(image);
   });
 }
 renderEmoji();

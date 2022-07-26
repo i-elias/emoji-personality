@@ -19,7 +19,7 @@ function renderEmoji() {
       emoji.endsWith(".webp") ||
       emoji.endsWith(".png")
     ) {
-      image.src = `/images/${emoji}`;
+      image.src = `images/${emoji}`;
       image.alt = `${emoji.replace(emoji.slice(-4), "")}`;
       emojiWrapper.append(image);
     } else {

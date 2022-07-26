@@ -6,7 +6,12 @@ const btnUnshift = document.getElementById("unshift-btn");
 const emojiWrapper = document.querySelector("#emoji-wrapper");
 const emojiInput = document.querySelector("input");
 
-const myEmojis = ["R2D2.webp", "obi-wan-kenobi.webp", "doge.png"];
+const myEmojis = [
+  "images/R2D2.webp",
+  "images/obi-wan-kenobi.webp",
+  "images/doge.png",
+];
+
 function renderEmoji() {
   emojiInput.value = "";
   myEmojis.forEach(emoji => {
@@ -14,22 +19,13 @@ function renderEmoji() {
     const image = document.createElement("img");
     spanEl.className = "emoji";
     image.className = "emoji emoji-img";
-    if (
-      emoji.startsWith("http") &&
-      (emoji.endsWith(".jpg") ||
-       emoji.endsWith(".webp") ||
-       emoji.endsWith(".png"))
-    ) {
-      image.alt = "";
-      image.src = `${emoji}`;
-    }
-    else if (
+     if (
       emoji.endsWith(".jpg") ||
       emoji.endsWith(".webp") ||
       emoji.endsWith(".png")
     ) {
-      image.src = `images/${emoji}`;
-      image.alt = `${emoji.replace(emoji.slice(-4), "")}`;
+      image.src = `${emoji}`;
+      image.alt = "";
     } else {
       spanEl.textContent = emoji;
       emojiWrapper.append(spanEl);

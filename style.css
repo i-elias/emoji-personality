@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  background-color: rgb(14, 9, 33);
+}
+
+#wrapper {
+  width: 650px;
+  margin: 80px auto;
+}
+
+header {
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 60px;
+}
+
+h1 {
+  position: relative;
+  color: #eff708;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  text-shadow: 0 0 1px rgb(250, 250, 250);
+  font-size: 60px;
+  font-weight: 900;
+}
+
+h1::before {
+  position: absolute;
+  top: 3px;
+  content: "EMOJIS";
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  color: #1cf183;
+  z-index: -1;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: #f8f1f1;
+}
+#emoji-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 15px 30px;
+  width: 600px;
+  margin: 0 auto 80px;
+  background-color: rgb(236, 139, 241);
+}
+
+#emoji-wrapper::before,
+#emoji-wrapper::after {
+  position: absolute;
+  border: 2px dotted rgb(44, 239, 93);
+}
+
+#emoji-wrapper::before {
+  bottom: -6px;
+  right: 5px;
+  content: "";
+  width: 98%;
+  height: 20px;
+  background-color: rgba(89, 48, 166, 0.897);
+  z-index: -1;
+}
+#emoji-wrapper::after {
+  bottom: -10px;
+  left: 10px;
+  content: "";
+  width: 96%;
+  height: 10px;
+  background-color: rgba(67, 92, 194, 0.788);
+  z-index: -2;
+}
+
+.emoji {
+  padding: 10px 20px;
+  max-width: 150px;
+  margin: 0 5px 10px;
+  font-size: 36px;
+}
+.emoji-img {
+  max-width: 120px;
+  max-height: 150px;
+  padding: 5px 20px;
+  font-size: 15px;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  width: 400px;
+  padding: 30px 40px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px rgb(119, 119, 119);
+  background-color: #a4a199;
+  border-radius: 25px;
+}
+
+input {
+  align-self: flex-start;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 25px 0;
+  margin: 0 10px;
+  outline: none;
+  background-color: antiquewhite;
+  border: solid 2px rgb(152, 155, 157);
+  font-size: 24px;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+input:focus {
+  background-color: rgb(243, 229, 138);
+}
+
+.icons-grp {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: 20px;
+}
+
+.icons-grp-left {
+  position: relative;
+}
+.icons-grp-right {
+  position: relative;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  stroke: #302d2d;
+  cursor: pointer;
+}
+
+.push-icon {
+  fill: #1589e2;
+}
+.unshift-icon {
+  fill: rgb(225, 176, 14);
+}
+
+.shift-icon {
+  stroke: red;
+}
+
+.pop-icon {
+  stroke: rgb(199, 10, 196);
+}
+
+#unshift-btn,
+#pop-btn {
+  align-self: flex-end;
+}
+#push-btn,
+#shift-btn {
+  align-self: flex-start;
+}
+
+.empty-btn {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  border: 2px solid rgb(61, 60, 60);
+  border-radius: 25px;
+  background-color: rgb(82, 77, 99);
+  transform: rotate(90deg);
+}
+
+.empty-btn-left {
+  top: 100%;
+  left: 100%;
+}
+.empty-btn-right {
+  top: 100%;
+  right: 100%;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Fredoka+One&family=Orbitron:wght@400;900&family=Roboto:ital,wght@0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>EMOJIS</h1>
+        <p>express yourself through emojis</p>
+      </header>
+
+      <div id="emoji-wrapper"></div>
+
+      <div id="input-container">
+        <div class="icons-grp icons-grp-left">
+          <svg id="unshift-btn" class="icon unshift-icon">
+            <use xlink:href="icons.svg#add"></use>
+          </svg>
+          <svg id="shift-btn" class="icon shift-icon">
+            <use xlink:href="icons.svg#remove"></use>
+          </svg>
+          <div class="empty-btn empty-btn-left"></div>
+        </div>
+
+        <input type="text" placeholder="type your emoji here" />
+
+        <div class="icons-grp icons-grp-right">
+          <svg id="push-btn" class="icon push-icon">
+            <use xlink:href="icons.svg#add"></use>
+          </svg>
+          <svg id="pop-btn" class="icon pop-icon">
+            <use xlink:href="icons.svg#remove"></use>
+          </svg>
+          <div class="empty-btn empty-btn-right"></div>
+        </div>
+      </div>
+    </div>
+    <script src="emoji.js"></script>
+  </body>
+</html>
